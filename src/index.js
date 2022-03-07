@@ -1,4 +1,6 @@
-var numbers = [3, 56, 2, 48, 5];
+import React from "react";
+
+// var numbers = [3, 56, 2, 48, 5];
 
 //Map -Create a new array by doing something with each item in an array.
 
@@ -9,3 +11,19 @@ var numbers = [3, 56, 2, 48, 5];
 //Find - find the first item that matches from an array.
 
 //FindIndex - find the index of the first item that matches.
+
+import emojipedia from "./emojipedia";
+
+console.log(emojipedia);
+
+function trimTxt(text) {
+  let trimmedTxt = text.meaning.substring(0, 100);
+  return trimmedTxt;
+}
+
+let shortMeaning = emojipedia.map(trimTxt);
+
+//console.log(shortMeaning);
+
+const shorterMeaning = emojipedia.map((obj) => obj.meaning.substring(0, 100));
+console.log(shorterMeaning);
